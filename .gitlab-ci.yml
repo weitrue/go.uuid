@@ -1,0 +1,28 @@
+image: docker:dind
+
+#设置变量/如果有私密变量，可以在gitlab 项目流水线设置中配置
+variables:
+  DOCKER_DRIVER: overlay
+  GO111MODULE: "on"
+  TZ: Asia/Shanghai
+  GOPROXY: https://goproxy.dianchu.cc
+
+
+before_script:
+  - export NOW=$(date "+%Y-%m-%d %H:%M:%S")
+  - export CI_COMMIT_SHORT_SHA=${CI_COMMIT_SHA:0:8}
+
+stages:
+  - test
+
+test:
+  image: golang:1.11.5
+  stage: test
+  script:
+    - go version
+    - go env
+    - export
+    - go vet -composites=false ./...
+    - go test -v -race -cover ./...
+  tags:
+    - rancher_docker
