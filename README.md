@@ -17,7 +17,7 @@ Supported versions:
 
 Use the `go` command:
 
-	$ go get gitlab.dianchu.cc/Taotie/uuid
+	$ github.com/weitrue/go.uuid v1.2.3
 
 ## Requirements
 
