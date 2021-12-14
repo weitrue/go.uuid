@@ -17,7 +17,7 @@ Supported versions:
 
 Use the `go` command:
 
-	$ github.com/weitrue/go.uuid v1.2.3
+	$ go get github.com/weitrue/go.uuid@v1.2.1
 
 ## Requirements
 
@@ -30,7 +30,7 @@ package main
 
 import (
 	"fmt"
-	"gitlab.dianchu.cc/Taotie/uuid"
+	"github.com/weitrue/go.uuid"
 )
 
 func main() {
@@ -48,7 +48,7 @@ func main() {
 	fmt.Printf("UUIDv4: %s\n", u2)
 
 	// Parsing UUID from string input
-	u2, err := uuid.FromString("6ba7b810-9dad-11d1-80b4-00c04fd430c8")
+	u2, err = uuid.FromString("6ba7b810-9dad-11d1-80b4-00c04fd430c8")
 	if err != nil {
 		fmt.Printf("Something went wrong: %s", err)
 		return

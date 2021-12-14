@@ -5,7 +5,6 @@ variables:
   DOCKER_DRIVER: overlay
   GO111MODULE: "on"
   TZ: Asia/Shanghai
-  GOPROXY: https://goproxy.dianchu.cc
 
 
 before_script:
