@@ -71,7 +71,3 @@ Copyright (C) 2013-2018 by Maxim Bublis <b@codemonkey.ru>.
 
 UUID package released under MIT License.
 See [LICENSE](https://github.com/satori/go.uuid/blob/master/LICENSE) for details.
-
-## Change
-
-chenjingyi
